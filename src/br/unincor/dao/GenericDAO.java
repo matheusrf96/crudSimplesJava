@@ -42,9 +42,9 @@ public class GenericDAO {
 	}
 	
 	public void insertAluno(Aluno p){
-		String sql = "INSERT INTO Aluno VALUES("
-				+ "default, '"
-				+ p.getnome() + "')";
+		String sql = "INSERT INTO aluno(nome, cpf, dt_nasc, mensalidade) VALUES("
+				+ "'" +  p.getnome() + "', '"
+				+ p.getcpf() + "', '2000-01-01', 1000.0)";
 		
 		PreparedStatement pStatement;
 		
